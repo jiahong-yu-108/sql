@@ -56,7 +56,12 @@ The store wants to keep customer addresses. Propose two architectures for the CU
 **HINT:** search type 1 vs type 2 slowly changing dimensions. 
 
 ```
-Your answer...
+Type 1 (The overwrite architecture)
+In this setup, the CUSTOMER_ADDRESS table only keeps one row per customer. If a customer moves to a new house, the database uses an UPDATE command to completely overwrite their old address with the new one.
+
+Type 2 (The retain changes architecture)
+In this setup, the database never deletes or overwrites an address. Instead, the table includes extra tracking columns, usually start_date, end_date, and an is_current flag (True/False).
+
 ```
 
 ***
@@ -191,5 +196,17 @@ Consider, for example, concepts of labour, bias, LLM proliferation, moderating c
 
 
 ```
-Your thoughts...
+Artificial intelligence (AI) can seem like magic. Many people think machines are thinking on their own. However, the article "Neural nets are just people all the way down" explains a different truth. It shows that AI is completely built on human work. Because people make AI, it brings up many important ethical issues. These issues include human labor, bias, the rapid spread of large language models (LLMs), and content moderation.
+
+First, we must look at human labor. AI needs huge amounts of data to learn. But machines cannot understand raw data on their own. Human workers must look at pictures, text, and videos to label them. For example, a person has to tell the machine which picture shows a traffic light and which shows a pizza. This is called data annotation. This work is very repetitive. It is also often done by hidden workers who receive very low pay. The success of modern AI relies completely on this cheap human labor.
+
+Second, AI is full of human bias. People often believe that computers are perfectly fair and objective. This is not true. Human beings choose what data to collect. They decide how to label it. They choose the rules the computer follows. If the training data is biased, the AI will be biased. If the creators have blind spots, the AI will have blind spots too. Because human choices are at the core of every neural network, AI can easily copy and repeat the unfair parts of our society.
+
+Third, the rapid spread, or proliferation, of LLMs makes these problems bigger. Today, big tech companies are putting AI into everything we use. We see chatbots in our phones, schools, and workplaces. As these language models grow, the hunger for training data also grows. This means companies need even more human workers to train and fix the machines. The fast growth of AI makes it much harder to control the risks.
+
+Fourth, moderating content is a major ethical issue. As AI generates more text and images, it can sometimes create harmful or toxic content. To stop this, companies hire human moderators. These workers have to look at awful, violent, or hateful things so the AI learns not to show them to users. This is a very heavy burden. It can cause serious stress and mental health problems for the human moderators who clean up the internet.
+
+Finally, all of this shows the deep intersection of technology and society. Technology does not exist in an empty room. It is deeply connected to how we live, work, and treat each other. When we build new tools, we are also building new social rules. If we ignore the human workers who make AI possible, we are creating an unfair system.
+
+In conclusion, neural networks are not just smart math or magic computer code. They are exactly what the article says: "people all the way down." Every algorithm is built on human effort. As we continue to use more AI in our daily lives, we must remember the real people behind the screens. We have a duty to pay workers fairly, reduce bias in our data, and make sure technology helps all of society instead of just a few people.
 ```
